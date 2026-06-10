@@ -58,10 +58,9 @@ jobs:
         run: pip install 'ansible-builder>=3.1.1'
 
       - name: Create Executor build context
-        working-directory: utils/ansible_executor
         run: |
-          ansible-builder create \
-            -f execution-environment.yml \
+          ansible-builder build \
+            -f utils/ansible_executor/execution-environment.yml \
             -c context
 
       - name: Build and push multi-arch image
