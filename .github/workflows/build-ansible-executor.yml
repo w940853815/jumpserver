@@ -62,7 +62,8 @@ jobs:
           ansible-builder create \
             -f utils/ansible_executor/execution-environment.yml \
             -c utils/ansible_executor/context
-            
+            --output-filename Dockerfile
+
       - name: Debug build context
         run: ls -la utils/ansible_executor/context/      
 
