@@ -69,5 +69,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           context: utils/ansible_executor/context
-          file: utils/ansible_executor/context/Dockerfile
           tags: ruidong/ansible-executor:${{ env.IMAGE_TAG }}
