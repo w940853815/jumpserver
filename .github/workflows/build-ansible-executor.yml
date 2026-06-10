@@ -62,6 +62,9 @@ jobs:
           ansible-builder create \
             -f utils/ansible_executor/execution-environment.yml \
             -c utils/ansible_executor/context
+            
+      - name: Debug build context
+        run: ls -la utils/ansible_executor/context/      
 
       - name: Build and push multi-arch image
         uses: docker/build-push-action@v6
