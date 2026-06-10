@@ -59,7 +59,7 @@ jobs:
 
       - name: Create Executor build context
         run: |
-          ansible-builder build \
+          ansible-builder create \
             -f utils/ansible_executor/execution-environment.yml \
             -c context
 
