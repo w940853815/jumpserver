@@ -73,4 +73,6 @@ jobs:
           push: true
           context: utils/ansible_executor/context
           file: utils/ansible_executor/context/Containerfile
-          tags: ruidong/ansible-executor:${{ env.IMAGE_TAG }}
+          tags: |
+            ruidong/ansible-executor:${{ env.IMAGE_TAG }}
+            ruidong/ansible-executor:latest
