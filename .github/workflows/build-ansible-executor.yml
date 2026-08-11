@@ -66,10 +66,10 @@ jobs:
       - name: Build and push multi-arch image
         uses: docker/build-push-action@v6
         with:
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           context: utils/ansible_executor/context
           file: utils/ansible_executor/context/Containerfile
           tags: |
-            jumpserver/ansible-executor:${{ env.IMAGE_TAG }}
-            jumpserver/ansible-executor:latest
+            ruidong/ansible-executor:${{ env.IMAGE_TAG }}
+            ruidong/ansible-executor:latest
